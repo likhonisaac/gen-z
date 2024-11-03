@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample API</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <h1>My App API Documentation</h1>
+    <br>
+
+    <h2>Instructions for <code>/auth</code> Route</h2>
+    <ul>
+        <li>To login a user, send a <code>POST</code> request to the <code>/auth</code> route.</li>
+        <ul>
+            <li class="indented">The body of this request should contain a JSON object with the following properties:
+                <code>{username, password}</code>
+            </li>
+        </ul>
+
+        <li>To register a new user, send a <code>POST</code> request to the <code>/auth/register</code> route.</li>
+        <ul>
+            <li class="indented">The body of this request should contain a JSON object with the following properties:
+                <code>{username, password, first_name, last_name}</code>
+            </li>
+        </ul>
+
+        <li>To refresh a user's access token, send a <code>GET</code> request to the <code>/auth/refresh</code> route.
+        </li>
+
+        <li>To logout a user, send a <code>GET</code> request to the <code>/auth/logout</code> route.</li>
+    </ul>
+
+    <br />
+
+    <footer>
+        <p>API Documentation - &copy; <span id="currentYear"></span> My App</p>
+    </footer>
+
+    <script>
+        var currentYear = new Date().getFullYear();
+        document.getElementById("currentYear").textContent = currentYear;
+    </script>
+</body>
+
+</html>
